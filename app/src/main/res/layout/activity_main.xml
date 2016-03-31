@@ -1,235 +1,289 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:padding="10dp"
     android:fillViewport="false"
-    android:orientation="vertical">
-        <!--
-        Edittexts are aligned to their cooresponding Textview. To adjust spacing, only adjust the textviews!
-        -Aman
-        -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Home Value"
-            android:textSize="20dp"
-            android:id="@+id/HomeValue"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Down Payment"
-            android:textSize="20dp"
-            android:id="@+id/DownPayment"
-            android:layout_below="@+id/HomeValue"
-            android:layout_marginTop="10dp"
-            android:layout_alignParentStart="true" />
+    android:orientation="vertical"
+    android:background="@mipmap/kuaotunihouse">
 
-        <TextView
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Mortgage Calculator"
+        android:id="@+id/textView"
+        android:textStyle="bold"
+        android:textSize="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true" />
+
+    <ScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="APR"
-            android:textSize="20dp"
-            android:id="@+id/APR"
-            android:layout_marginTop="10dp"
-            android:layout_below="@+id/DownPayment"
-            android:layout_alignParentStart="true" />
+            android:id="@+id/scrollView"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="10dp"
+        android:alpha="0.7">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Terms"
-            android:textSize="20dp"
-            android:id="@+id/Term"
-            android:layout_below="@+id/APR"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="10dp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Tax Rate"
-            android:textSize="20dp"
-            android:id="@+id/TaxRate"
-            android:layout_below="@+id/Term"
-            android:layout_marginTop="10dp"
-            android:layout_alignParentStart="true" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Home Value"
+                            android:textSize="20dp"
+                            android:id="@+id/HomeValue"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="true"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold" />
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:id="@+id/HomeValueField"
-            android:inputType="numberDecimal"
-            android:digits="0123456789,."
-            android:layout_toEndOf="@+id/HomeValue"
-            android:layout_marginLeft="20dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignBaseline="@+id/HomeValue"
-            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Down Payment"
+                            android:textSize="20dp"
+                            android:id="@+id/DownPayment"
+                            android:layout_below="@+id/HomeValue"
+                            android:layout_marginTop="10dp"
+                            android:layout_alignParentStart="true"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold" />
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:id="@+id/DownPayField"
-            android:layout_toEndOf="@+id/DownPayment"
-            android:layout_marginLeft="20dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignBaseline="@+id/DownPayment"
-            android:inputType="numberDecimal"
-            android:digits="0123456789,."
-             />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="APR"
+                            android:textSize="20dp"
+                            android:id="@+id/APR"
+                            android:layout_marginTop="10dp"
+                            android:layout_below="@+id/DownPayment"
+                            android:layout_alignParentStart="true"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold" />
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:ems="10"
-            android:id="@+id/APRField"
-            android:layout_toEndOf="@+id/APR"
-            android:layout_marginLeft="20dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignBaseline="@+id/APR" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Terms"
+                            android:textSize="20dp"
+                            android:id="@+id/Term"
+                            android:layout_below="@+id/APR"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="10dp"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold" />
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:ems="10"
-            android:id="@+id/TermsField"
-            android:layout_toEndOf="@+id/Term"
-            android:layout_marginLeft="20dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignBaseline="@+id/Term" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Tax Rate"
+                            android:textSize="20dp"
+                            android:id="@+id/TaxRate"
+                            android:layout_below="@+id/Term"
+                            android:layout_marginTop="10dp"
+                            android:layout_alignParentStart="true"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold" />
 
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:id="@+id/HomeValueField"
+                            android:inputType="numberDecimal"
+                            android:digits="0123456789,."
+                            android:layout_toEndOf="@+id/HomeValue"
+                            android:layout_marginLeft="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignBaseline="@+id/HomeValue"
+                            android:textColor="#FFFFFF" />
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:ems="10"
-            android:id="@+id/TaxRateField"
-            android:layout_toEndOf="@+id/TaxRate"
-            android:layout_marginLeft="20dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignBaseline="@+id/TaxRate" />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:id="@+id/DownPayField"
+                            android:layout_toEndOf="@+id/DownPayment"
+                            android:layout_marginLeft="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignBaseline="@+id/DownPayment"
+                            android:inputType="numberDecimal"
+                            android:digits="0123456789,."
+                            android:textColor="#FFFFFF" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Payment"
-            android:id="@+id/Payment"
-            android:textSize="20dp"
-            android:layout_below="@+id/TaxRate"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="30dp" />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:ems="10"
+                            android:id="@+id/APRField"
+                            android:layout_toEndOf="@+id/APR"
+                            android:layout_marginLeft="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignBaseline="@+id/APR"
+                            android:textColor="#FFFFFF" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Total Tax Paid"
-            android:id="@+id/TotalTaxPaid"
-            android:textSize="20dp"
-            android:layout_below="@+id/Payment"
-            android:layout_marginTop="10dp"
-            android:layout_alignParentStart="true" />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:ems="10"
+                            android:id="@+id/TermsField"
+                            android:layout_toEndOf="@+id/Term"
+                            android:layout_marginLeft="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignBaseline="@+id/Term"
+                            android:textColor="#FFFFFF" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Total Interest Paid"
-            android:id="@+id/TotalInterestPaid"
-            android:textSize="20dp"
-            android:layout_below="@+id/TotalTaxPaid"
-            android:layout_marginTop="10dp"
-            android:layout_alignParentStart="true" />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:ems="10"
+                            android:id="@+id/TaxRateField"
+                            android:layout_toEndOf="@+id/TaxRate"
+                            android:layout_marginLeft="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignBaseline="@+id/TaxRate"
+                            android:textColor="#FFFFFF" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/PaymentAnswer"
-            android:layout_toEndOf="@+id/TotalTaxPaid"
-            android:layout_marginLeft="20dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignBaseline="@+id/TotalTaxPaid" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Payment"
+                            android:id="@+id/Payment"
+                            android:textSize="25dp"
+                            android:layout_below="@+id/TaxRate"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="30dp"
+                            android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/InterestPaidAnswer"
-            android:layout_toEndOf="@+id/TotalInterestPaid"
-            android:layout_marginLeft="20dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignBaseline="@+id/TotalInterestPaid" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Total Tax Paid"
+                            android:id="@+id/TotalTaxPaid"
+                            android:textSize="20dp"
+                            android:layout_below="@+id/Payment"
+                            android:layout_marginTop="10dp"
+                            android:layout_alignParentStart="true"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Monthly Payment"
-            android:id="@+id/MonthlyPayment"
-            android:textSize="20dp"
-            android:layout_below="@+id/TotalInterestPaid"
-            android:layout_marginTop="10dp"
-            android:layout_alignParentStart="true" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Total Interest Paid"
+                            android:id="@+id/TotalInterestPaid"
+                            android:textSize="20dp"
+                            android:layout_below="@+id/TotalTaxPaid"
+                            android:layout_marginTop="10dp"
+                            android:layout_alignParentStart="true"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/PayoffDateAnswer"
-            android:layout_toEndOf="@+id/Payoffdate"
-            android:layout_marginLeft="20dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignBaseline="@+id/Payoffdate" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:id="@+id/PaymentAnswer"
+                            android:layout_toEndOf="@+id/TotalTaxPaid"
+                            android:layout_marginLeft="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignBaseline="@+id/TotalTaxPaid"
+                            android:textColor="#FFFFFF" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Pay off date"
-            android:textSize="20dp"
-            android:id="@+id/Payoffdate"
-            android:layout_below="@+id/MonthlyPayment"
-            android:layout_marginTop="10dp"
-            android:layout_alignParentStart="true" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:id="@+id/InterestPaidAnswer"
+                            android:layout_toEndOf="@+id/TotalInterestPaid"
+                            android:layout_marginLeft="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignBaseline="@+id/TotalInterestPaid"
+                            android:textColor="#FFFFFF" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/MonthlyPaymentAnswer"
-            android:layout_toEndOf="@+id/MonthlyPayment"
-            android:layout_marginLeft="20dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignBaseline="@+id/MonthlyPayment" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Monthly Payment"
+                            android:id="@+id/MonthlyPayment"
+                            android:textSize="20dp"
+                            android:layout_below="@+id/TotalInterestPaid"
+                            android:layout_marginTop="10dp"
+                            android:layout_alignParentStart="true"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Reset"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:id="@+id/Reset" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:id="@+id/PayoffDateAnswer"
+                            android:layout_toEndOf="@+id/Payoffdate"
+                            android:layout_marginLeft="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignBaseline="@+id/Payoffdate"
+                            android:textColor="#FFFFFF" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Calculate"
-            android:id="@+id/Calculate"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Pay off date"
+                            android:textSize="20dp"
+                            android:id="@+id/Payoffdate"
+                            android:layout_below="@+id/MonthlyPayment"
+                            android:layout_marginTop="10dp"
+                            android:layout_alignParentStart="true"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:id="@+id/MonthlyPaymentAnswer"
+                            android:layout_toEndOf="@+id/MonthlyPayment"
+                            android:layout_marginLeft="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignBaseline="@+id/MonthlyPayment"
+                            android:textColor="#FFFFFF" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Reset"
+                            android:id="@+id/Reset"
+                            android:layout_below="@+id/Payoffdate"
+                            android:layout_alignStart="@+id/Payoffdate"
+                            android:layout_marginTop="20dp"
+                            android:background="#808080" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Calculate"
+                            android:id="@+id/Calculate"
+                            android:layout_alignTop="@+id/Reset"
+                            android:layout_alignEnd="@+id/PayoffDateAnswer"
+                            android:background="#808080" />
+                </RelativeLayout>
+        </ScrollView>
+
 
 </RelativeLayout>
